@@ -18,8 +18,8 @@ const ENABLED_INDEXERS = {
   finder: true,            // ✅ Core - Good for older/rare content
   tosho: false,             // ✅ Specialist - Foreign cinema, varied sources
   usenetcrawler: true,     // ⚠️  Often dupes NZBGeek (disable to speed up)
-  althub: false,           // ❌ Regional SA - disable unless needed
-  ninjacentral: false,     // ❌ Low unique content - disable to speed up
+  althub: true,           // ❌ Regional SA - disable unless needed
+  ninjacentral: true,     // ❌ Low unique content - disable to speed up
   nzbsu: true,            // ❌ High dupe rate - disable to speed up
   planet: false,           // ❌ High dupe rate - disable to speed up
 };
