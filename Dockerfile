@@ -14,11 +14,11 @@ RUN curl -fSL -o node.tar.gz https://nodejs.org/dist/v18.19.0/node-v18.19.0-linu
     && ln -s /usr/local/nodejs/bin/npm /usr/local/bin/npm
 
 # Download from GitHub
-RUN curl -L -o addon.zip https://github.com/mik25/filter/archive/refs/heads/5vers3.zip \
+RUN curl -L -o addon.zip https://github.com/charles-bukow/imdbdon/archive/refs/heads/main.zip \
     && apt-get update && apt-get install -y unzip && apt-get clean \
     && unzip addon.zip && rm addon.zip \
-    && mv filter-5vers3/* . && mv filter-5vers3/.* . 2>/dev/null || true \
-    && rm -rf filter-5vers3
+    && mv filter-main/* . && mv filter-main/.* . 2>/dev/null || true \
+    && rm -rf filter-main
 
 # Force replace any port references with 80
 RUN find . -type f -name "*.js" -exec sed -i 's/3003/80/g' {} \; || true
